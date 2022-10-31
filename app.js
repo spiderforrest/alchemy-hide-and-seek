@@ -82,8 +82,10 @@ function handleGuess(correctSpot, userGuess) {
     lossesEl.textContent = totalGuesses - correctGuesses;
 
     // and show the try again button/hide the others
-    shedButton.classList.add('hidden');
-    treeButton.classList.add('hidden');
-    boulderButton.classList.add('hidden');
+
+    // just uncommenting these lets more than one be right lol so that's a stretch goal
+    // shedButton.classList.add('hidden');
+    // treeButton.classList.add('hidden');
+    // boulderButton.classList.add('hidden');
     tryAgainButton.classList.remove('hidden');
 }
