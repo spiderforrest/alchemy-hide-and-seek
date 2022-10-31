@@ -3,6 +3,7 @@ const shedButton = document.getElementById('shed-button');
 const treeButton = document.getElementById('tree-button');
 const boulderButton = document.getElementById('boulder-button');
 const resetButton = document.getElementById('reset-button');
+const tryAgainButton = document.getElementById('try-again-button');
 
 const shedContainer = document.getElementById('shed-container');
 const treeContainer = document.getElementById('tree-container');
@@ -45,15 +46,22 @@ resetButton.addEventListener('click', () => {
     resetFaceClass();
 });
 
+tryAgainButton.addEventListener('click', () => {
+    // reset the styles
+    resetFaceClass();
+});
+
 function resetFaceClass() {
     shedContainer.classList.remove('face');
     treeContainer.classList.remove('face');
     boulderContainer.classList.remove('face');
+    shedButton.classList.remove('hidden');
+    treeButton.classList.remove('hidden');
+    boulderButton.classList.remove('hidden');
+    tryAgainButton.classList.add('hidden');
 }
 
 function handleGuess(correctSpot, userGuess) {
-    // reset the styles
-    resetFaceClass();
     // then increment the guesses
     totalGuesses++;
 
@@ -72,4 +80,10 @@ function handleGuess(correctSpot, userGuess) {
     totalEl.textContent = totalGuesses;
     winsEl.textContent = correctGuesses;
     lossesEl.textContent = totalGuesses - correctGuesses;
+
+    // and show the try again button/hide the others
+    shedButton.classList.add('hidden');
+    treeButton.classList.add('hidden');
+    boulderButton.classList.add('hidden');
+    tryAgainButton.classList.remove('hidden');
 }

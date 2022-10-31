@@ -108,3 +108,13 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 }
+
+#reset-button {
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+}
