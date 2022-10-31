@@ -1,0 +1,24 @@
+.hiding-places {
+    height: 300px;
+    display: flex;
+}
+
+.hiding-place {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hiding-img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.face::after {
+    font-size: 8rem;
+    content: '😃';
+    position: absolute;
+}

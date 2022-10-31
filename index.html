@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="gutter-right logo">
+            <img src="assets/big-logo.png" />
+        </div>
+    </header>
+    <main>
+        <section class="main-section">
+            <h2>
+                Guess where I'm hiding!
+            </h2>
+            <div class="hiding-places">
+                <div id="tree-container" class="hiding-place">
+                    <img src="./assets/tree.webp" class="hiding-img" />
+                    <button id="tree-button">Tree</button>    
+                </div>
+                <div id="boulder-container" class="hiding-place">
+                    <img src="./assets/boulder.png" class="hiding-img" />
+                    <button id="boulder-button">Boulder</button>
+                </div>
+                <div id="shed-container" class="hiding-place">
+                    <img src="./assets/shed.png" class="hiding-img" />
+                    <button id="shed-button">Shed</button>        
+                </div>
+            </div>
+            <div>You guessed correctly <span id="wins">0</span> times</div>
+            <div>and incorrectly <span id="losses">0</span> times</div>
+            <div>out of</div>
+            <div> <span id="total">0</span> games.</div>
+        </section>
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
