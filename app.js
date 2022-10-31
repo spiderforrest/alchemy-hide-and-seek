@@ -2,6 +2,7 @@
 const shedButton = document.getElementById('shed-button');
 const treeButton = document.getElementById('tree-button');
 const boulderButton = document.getElementById('boulder-button');
+const resetButton = document.getElementById('reset-button');
 
 const shedContainer = document.getElementById('shed-container');
 const treeContainer = document.getElementById('tree-container');
@@ -35,12 +36,24 @@ boulderButton.addEventListener('click', () => {
     handleGuess(answer, 'boulder');
 });
 
-function handleGuess(correctSpot, userGuess) {
-    // reset the styles
+resetButton.addEventListener('click', () => {
+    correctGuesses = 0;
+    totalGuesses = 0;
+    totalEl.textContent = 0;
+    winsEl.textContent = 0;
+    lossesEl.textContent = 0;
+    resetFaceClass();
+});
+
+function resetFaceClass() {
     shedContainer.classList.remove('face');
     treeContainer.classList.remove('face');
     boulderContainer.classList.remove('face');
+}
 
+function handleGuess(correctSpot, userGuess) {
+    // reset the styles
+    resetFaceClass();
     // then increment the guesses
     totalGuesses++;
 
